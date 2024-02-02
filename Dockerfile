@@ -1,4 +1,5 @@
 FROM openjdk:17 AS BUILD_IMAGE
+FROM debian:bullseye
 RUN apt update && apt install maven -y
 COPY ./ vprofile-project
 RUN cd vprofile-project &&  mvn install 
